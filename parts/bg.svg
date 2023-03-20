@@ -1,0 +1,256 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'>
+    <script>// <![CDATA[
+    const q = Object.fromEntries([...new URLSearchParams(location.search)].map(([p, v]) => [p, v || true]));
+    const Q = el => document.querySelector(el);
+    const add = (html, where) => where.insertAdjacentHTML('beforeend', html);
+    const root = document.querySelector(':root');
+    root.style.setProperty('--c', q.hue);
+    root.style.setProperty('--base-b', (q.day? 65 : q.hue == 225 ? 5 : 0) + '%');
+
+    const stats = ['att', 'def', 'sta', 'wei', 'mec', 'bur'];
+    const types = ['att', 'def', 'sta', 'bal', 'nil'];
+    const start = 30.5, bot = 35;
+    const lineStroke = 1.5, imgBorder = q.day? 1.2 : 1, descBorder = .8;
+    const line = start + lineStroke / 2;
+    const img = (150 - bot + start + lineStroke) / 2 - 70 / 2;
+    const desc = img - imgBorder / 2 + descBorder / 2;
+    const step5 = (img + 70 + imgBorder / 2 - descBorder / 2 - 12 - desc) / 4;
+    const step6 = step5 * 4 / 5;
+    // ]]></script>
+    <style>
+    :root {--s:60%;}
+    .att {--c:200;} .def {--c:130;} .sta {--c:60;} .bal {--c:350;}
+    .mec {--c:280;} .bur {--c:30;}
+    .nil,.wei {--c:0;--s:0%;}
+
+    [id|=img] stop[offset='100%'] {--adj-b:calc(var(--b) - 35%);}
+    [id|=img] stop[offset='0%']   {--adj-b:calc(var(--b) - 15%);}
+    [id|=dd] stop[offset='100%']  {--adj-b:calc(var(--b) - 30%);}
+    stop:not([stop-color])      {stop-color:hsl(var(--c),var(--s),var(--adj-b));}
+    [id|=dd] stop[offset='0%']  {stop-color:hsl(0,0%,var(--b));}
+
+    #top-art line:nth-of-type(odd)  {stroke:hsl(var(--c),var(--s),calc(16.8% + 1.2%*var(--i) + var(--base-b)));}
+    #top-art line:nth-of-type(even) {stroke:hsl(var(--c),var(--s),calc(10% + 1%*var(--i) + var(--base-b)));}
+    
+    #top-art line {stroke-width:15;}
+    g[id|=dl] use {stroke-width:.8;}
+    polygon       {stroke-width:1; stroke:#666;}
+    #top+line     {stroke-width:1.5;}
+    #cell-g-6     {stroke-width:.5;}
+
+    defs~g rect {
+        width:70px;height:70px; }
+    defs~g:not(:target),#dl-5 use:last-child {
+        display:none; }
+    #top,polygon,#bot {
+        filter:url(#shadow); }
+
+    [id^=cell-g] {opacity:var(--grams,0);}    
+    #cell-n-5    {opacity:calc(1 - var(--grams,0) - var(--fusion,0));}
+    #cell-f-5    {opacity:var(--fusion,0);}
+    #line-o   {opacity:var(--odd-line,0);}
+    #line-v   {opacity:var(--even-line,0);}
+    #cell-n-6 {opacity:calc(1 - var(--fusion)); fill:var(--heavy-fill); cx:var(--circle-x);}
+    #cell-f-6 {opacity:var(--fusion,0); fill:var(--heavy-fill);}
+    #dl-6 use:nth-of-type(odd)  {--odd-line:1;--circle-x:139;}
+    #dl-6 use:nth-of-type(even) {--even-line:1;--circle-x:127;}
+    use.fusion {--fusion:1;}
+    use.grams  {--grams:1;}
+    </style>
+    <style class='day'>
+    :root {
+        --b:100%;
+        background:hsl(0,0%,90%);
+    }
+    defs~g rect   {
+        stroke:hsl(var(--c),var(--s),45%); }
+    #top+line     {
+        stroke:hsl(var(--c),70%,50%); }
+    g[id|=dl] use {
+        stroke:hsl(var(--c),var(--s),calc(var(--b) - 70%)); }
+    g[id|=dd] line,#dd-5 path:not([id]) {
+        stroke:grey;fill:none; }
+    g[id|=dd] line {
+        marker-start:url(#cc); }
+    defs~g rect,g[id|=dl] {
+        filter:url(#shadow); }
+    </style>
+    <script>// <![CDATA[
+        if (q.heavy)
+            add('.wei {--b:70% !important;}', Q('style.day'));
+    // ]]></script>
+    <style class='night'>
+    :root {
+        --b:60%;
+        background:hsl(var(--c),30%,calc(10% + var(--base-b)));
+    }
+    .wei,.nil {--b:90% !important;}
+    #sym-art  {--b:90%;}
+    defs~g rect {
+        stroke:hsl(var(--c),var(--s),var(--b));
+        fill:hsla(var(--c),var(--s),var(--b),.05); }
+    #top+line {
+        stroke:url(#line-art); }
+    #top+line,defs~g rect,g[id|=dl] use {
+        filter:url(#glow); }
+
+    g[id|=dl] use {
+        stroke:hsl(var(--c),var(--s),var(--b)); }
+    g[id|=dd] circle:nth-of-type(2) {
+        stroke-width:1.2; }
+    #dd-5 path:not([id]) {
+        fill:var(--heavy-fill); }
+    use.heavy {
+        --heavy-fill:hsla(0,0%,var(--b),.2); --heavy:1; }
+    #cell-n-5+path {opacity:calc((1 - var(--grams,0) - var(--fusion,0))*var(--heavy,0));}
+    #cell-f-5+path {opacity:calc(var(--fusion,0)*var(--heavy,0));}
+    #cell-g-5+path {opacity:calc(var(--grams,0)*var(--heavy,0));}
+    </style>
+    <defs>
+        <radialGradient id='sym-art' cy='95%' fr='50%' r='100%'>
+            <stop offset='0%' stop-color='hsl(0,0%,var(--b))'/>
+            <stop offset='100%' stop-color='hsl(0,0%,calc(var(--b) - 30%))'/>
+        </radialGradient>
+
+        <pattern id='top-art' width='150' height='1' patternTransform='scale(1.42857) skewX(45) translate(-25)' patternUnits='userSpaceOnUse'>
+            <script>// <![CDATA[
+            [s, place] = [15, Q('#top-art')];
+            for (let i = 1; i <= 10; i++)
+                add(`<line x1='${(i-1/2)*s}' x2='${(i-1/2)*s}' y2='1' style='--i:${i}'/>`, place);
+            // ]]></script>
+        </pattern>
+        <linearGradient id='bot-art'>
+            <stop offset='0%' stop-color='hsl(var(--c),var(--s),calc(15% + var(--base-b)))'/>
+            <stop offset='100%' stop-color='hsl(var(--c),var(--s),calc(25% + var(--base-b)))'/>
+        </linearGradient>
+
+        <g class='night'>
+            <linearGradient id='line-art' gradientUnits='userSpaceOnUse'>
+                <stop offset='0%' stop-color='hsla(var(--c),70%,calc(50% + var(--base-b)),.1)'/>
+                <stop offset='40%' stop-color='hsl(var(--c),70%,calc(50% + var(--base-b)))'/>
+                <stop offset='60%' stop-color='hsl(var(--c),70%,calc(50% + var(--base-b)))'/>
+                <stop offset='90%' stop-color='hsl(var(--c),70%,calc(60% + var(--base-b)))'/>
+            </linearGradient>
+        </g>
+
+        <g class='day'>
+            <script>// <![CDATA[
+            place = Q('g.day');
+            for (const t of types) add(`
+            <linearGradient id='img-${t}' class='${t}' x1='0' y1='100%' x2='100%' y2='0'>
+                <stop offset='0%'/><stop offset='100%'/>
+            </linearGradient>`, place);
+
+            for (const s of stats) add(`
+            <linearGradient id='dd-${s}-5' class='${s}' x1='0%' y1='100%' x2='0%' y2='0%'>
+                <stop offset='0%'/><stop offset='100%'/>
+            </linearGradient>
+            <radialGradient id='dd-${s}-6' class='${s}' fx='30%' fy='70%'>
+                <stop offset='0%'/><stop offset='100%'/>
+            </radialGradient>`, place);
+            // ]]></script>
+        </g>
+
+        <g id='dd-5' class='day'>
+            <path d='M 123.2,38.3 h -36.8 l -6,6 l 6,6 h 36.8'/>
+            <path d='M 123.2,38.3 l -6,6 l 6,6 h 15.6 a 6,6,0,0,0,0,-12 Z' id='cell-n-5'/>
+            <path d='M 115.2,38.3 l -6,6 l 6,6 h 23.6 a 6,6,0,0,0,0,-12 Z' id='cell-g-5'/>
+            <path d='M 123.2,38.3 l -6,6 l 6,6 h 19.6 a 1.5,1.5,0,0,0,1.5,-1.5 v -9 a 1.5,1.5,0,0,0,-1.5,-1.5 Z' id='cell-f-5'/>
+        </g>
+        <g id='dd-5' class='night'>
+            <circle r='2.5' cx='84' cy='44.3'/>
+            <circle r='0.6' cx='84' cy='44.3'/>
+            <path d='M 86,46.3 l 4,4 h 49 a 6,6,0,0,0,0,-12 h -14 l -6,6 l 6,6' id='cell-n-5'/>
+            <path d='M 125,50.3 h 14 a 6,6,0,0,0,0,-12 h -14 l -6,6 l 6,6 Z'/>
+            <path d='M 86,46.3 l 4,4 h 49 a 6,6,0,0,0,0,-12 h -22 l -6,6 l 6,6' id='cell-g-5'/>
+            <path d='M 117,50.3 h 22 a 6,6,0,0,0,0,-12 h -22 l -6,6 l 6,6 Z'/>
+            <path d='M 86,46.3 l 4,4 h 53 a 1.5,1.5,0,0,0,1.5,-1.5 v -9 a 1.5,1.5,0,0,0,-1.5,-1.5 h -18 l -6,6 l 6,6' id='cell-f-5'/>
+            <path d='M 117,50.3 h 26 a 1.5,1.5,0,0,0,1.5,-1.5 v -9 a 1.5,1.5,0,0,0,-1.5,-1.5 h -18 l -6,6 l 6,6 Z'/>
+        </g>
+
+        <circle id='cell-n-6' cy='44.3' r='6'/>
+        <path id='cell-g-6' d='M 132,48.3 h 7 a 4,4,0,0,0,0,-8 h -7 a 6,6,0,0,1,0,8' stroke='none' fill='grey'/>
+        <rect id='cell-f-6' width='12' height='12' x='121' y='38.3' rx='1.5' ry='1.5'/>
+        <g id='dd-6' class='day'>
+            <marker id='cc' overflow='visible'>
+                <circle r='1.5' fill='grey'/>
+            </marker>
+            <line x2='133' y2='44.3' x1='111' y1='44.3' id='line-o'/>
+            <line x2='121' y2='44.3' x1='111' y1='44.3' id='line-e'/>
+            <use href='#cell-g-6'/>
+            <use href='#cell-n-6'/>
+            <use href='#cell-f-6'/>
+        </g>
+        <g id='dd-6' class='night'>
+            <circle r='2.5' cx='111' cy='44.3'/>
+            <circle r='0.6' cx='111' cy='44.3'/>
+            <line x2='133' y2='44.3' x1='114' y1='44.3' id='line-o'/>
+            <line x2='121' y2='44.3' x1='114' y1='44.3' id='line-e'/>
+            <use href='#cell-g-6'/>
+            <use href='#cell-n-6'/>
+            <use href='#cell-f-6'/>
+        </g>
+
+        <g id='dl-5'>
+            <script>// <![CDATA[
+            place = Q('#dl-5');
+            stats.forEach((s, i) => {
+                const classes = [s, ...s == 'wei' ? [q.fusion && 'fusion' || q.grams && 'grams' || null, q.heavy && 'heavy' || null] : []];
+                add(`<use href='#dd-5' class='${classes.join(' ')}' transform='translate(0,${step5*i})' fill='${q.day ? `url(#dd-${s}-5)` : `none`}'/>`, place);
+            });
+            // ]]></script>
+        </g>
+        <g id='dl-6'>
+            <script>// <![CDATA[
+            place = Q('#dl-6');
+            stats.forEach((s, i) => {
+                const classes = [s, ...s == 'wei' ? [q.fusion && 'fusion' || q.grams && 'grams' || null, q.heavy && 'heavy' || null] : []];
+                add(`<use href='#dd-6' class='${classes.join(' ')}' transform='translate(0,${step6*i})' fill='${q.day ? `url(#dd-${s}-6)` : `none`}'/>`, place);
+            });
+            // ]]></script>
+        </g>
+
+        <filter id='glow' y='-10' x='-10' filterUnits='userSpaceOnUse'>
+            <feOffset in='SourceGraphic' dx='0' dy='0' result='offset'/>
+            <feGaussianBlur in='offset' stdDeviation='0.2' result='blur1'/>
+            <feGaussianBlur in='offset' stdDeviation='0.5' result='blur2'/>
+            <feGaussianBlur in='offset' stdDeviation='1.5' result='blur3'/>
+            <feMerge>
+                <feMergeNode in='blur1'/>
+                <feMergeNode in='blur2'/>
+                <feMergeNode in='blur3'/>
+                <feMergeNode in='SourceGraphic'/>
+            </feMerge>
+        </filter>
+
+        <filter id='shadow' width='30' height='30' y='-50%'>
+            <feDropShadow dx='' dy='' stdDeviation='.5' flood-color='black' flood-opacity=''/>
+        </filter>
+    </defs>
+
+    <rect id='top' width='100%' height='30.5' fill='url(#top-art)'/>
+    <line y1='31.25' y2='31.25' x2='99.4%' stroke-linecap='round'/>
+    <polygon points='3,-1 3,26 15,35 27,26 27,-1' fill='url(#sym-art)'/>
+    <rect id='bot' width='100%' height='35' y='115' fill='url(#bot-art)'/>
+    <path d='M 17.5,115 h -17.5 v 17.5 Z' fill='hsl(var(--c),var(--s),calc(25% + var(--base-b)))'/>
+    <path d='M 132.5,150 h 17.5 v -17.5 Z' fill='hsl(var(--c),var(--s),calc(15% + var(--base-b)))'/>
+    <script>// <![CDATA[
+    place = Q('polygon');
+    for (const t of types) place.insertAdjacentHTML('afterend', `
+        <g id='${t}5'>
+            <use href='#dl-5'/>
+            <rect class='${t}' x='5.5' y='${img}' rx='5' fill='url(#img-${t})' stroke-width='${imgBorder}'/>
+        </g>
+        <g id='${t}6'>
+            <use href='#dl-6'/>
+            <rect class='${t}' x='5.5' y='${img}' rx='5' fill='url(#img-${t})' stroke-width='${imgBorder}'/>
+        </g>`);
+
+    for (const u of document.querySelectorAll('g[id|=dl] use')) u.strokeWidth = descBorder;
+    for (const g of document.querySelectorAll(`.${q.day? 'night' : 'day'}`)) g.remove();
+
+    Q('feDropShadow').setAttribute('dx', +q.day || 0);
+    Q('feDropShadow').setAttribute('dy', -q.day || 0);
+    Q('feDropShadow').setAttribute('flood-opacity', q.day ? .15 : .8);
+    // ]]></script>
+</svg>

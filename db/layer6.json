@@ -1,0 +1,469 @@
+{
+    "layer6c": {
+        "Ac": {
+            "names": "AC",
+            "stat": [1,1,1,3,0,0],
+            "desc": "英雄［阿基里斯］。",
+            "attr": ["right"]
+        },
+        "Db": {
+            "names": "Db.layer5c",
+            "stat": [1,1,1,6,0,0],
+            "desc": "惡魔龍［迪亞波羅斯］。透過變形能裝上仼何左或右迴轉的 Ring。（金屬 Chip Core 一體型）",
+            "attr": ["left","right"]
+        },
+        "Dr": {
+            "names": "DR",
+            "stat": [1,1,1,3,0,0],
+            "desc": "傳說之幻獸［德拉貢］。",
+            "attr": ["right"]
+        },
+        "Dt": {
+            "names": {
+                "jap": "デスサイザー",
+                "eng": "Deathscyther",
+                "chi": "死神",
+                "can": "爹樹嘥炸"
+            },
+            "stat": [1,1,1,3,0,0],
+            "desc": "死神之鐮。",
+            "attr": ["right"]
+        },
+        "Ff": {
+            "names": "FF",
+            "stat": [1,1,1,3,0,0],
+            "desc": "黃金之龍［法夫納］。",
+            "attr": ["left"]
+        },
+        "Hl": {
+            "names": "HL",
+            "stat": [1,1,1,4,0,0],
+            "desc": "太陽神［海利歐斯］。",
+            "attr": ["left"]
+        },
+        "Hl2": {
+            "names": "HL",
+            "stat": [1,1,1,11,0,0],
+            "desc": "太陽神［海利歐斯］。本體搭載金屬令重量提升，亦使用了 Metal Chip Core。",
+            "attr": ["left"]
+        },
+        "Hy": {
+            "names": "HY",
+            "stat": [1,1,1,4,0,0],
+            "desc": "太陽神［海柏利昂］。",
+            "attr": ["right"]
+        },
+        "Hy2": {
+            "names": "HY",
+            "stat": [1,1,1,12,0,0],
+            "desc": "太陽神［海柏利昂］。本體搭載金屬令重量提升，亦使用了 Metal Chip Core。",
+            "attr": ["right"]
+        },
+        "Lc": {
+            "names": "LC",
+            "stat": [1,1,1,12,0,0],
+            "desc": "墮天使［路西法］。搭載金屬組件，能產生厚重的高攻擊力。Chip Core 一體型。",
+            "attr": ["right"]
+        },
+        "Lc2": {
+            "names": "LC",
+            "stat": [1,2,1,14,0,0],
+            "desc": "墮天使［路西法］。本體搭載金屬，同時搭載在中央的橡膠突起令 Lock 變硬。Chip Core 一體型。",
+            "attr": ["right"]
+        },
+        "Ln": {
+            "names": "LN",
+            "stat": [2,0,1,3,0,0],
+            "desc": "破滅之槍［朗基努斯］。（Lock 較緊但「血量」較少）",
+            "attr": ["left"]
+        },
+        "Rg": {
+            "names": "RG",
+            "stat": [1,1,1,3,0,0],
+            "desc": "被終末之火炎包圍的惡魔。",
+            "attr": ["right"]
+        },
+        "Sp": {
+            "names": "SP",
+            "stat": [2,0,1,7,0,0],
+            "desc": "守護財寶的巨人［斯普利坎］。透過變形能裝上仼何左或右迴轉的 Ring。金屬 Chip Core 一體型。（Lock 較緊但「血量」較少）",
+            "attr": ["left","right"]
+        },
+        "St": {
+            "names": {
+                "jap": "サタン",
+                "eng": "Satan",
+                "chi": "撒旦",
+                "can": "沙炭"
+            },
+            "stat": [1,1,1,3,0,0],
+            "desc": "惡魔王［撒旦］。",
+            "attr": ["right"]
+        },
+        "Ur": {
+            "names": {
+                "jap": "ウラヌス",
+                "eng": "Uranus",
+                "chi": "天空神",
+                "can": "互躝劣樹"
+            },
+            "stat": [1,1,1,3,0,0],
+            "desc": "天空神［烏拉諾斯］。",
+            "attr": ["right"]
+        },
+        "Vl": {
+            "names": "VL",
+            "stat": [2,0,1,2,0,0],
+            "desc": "戰鬥之神［瓦爾基麗］。（Lock 較緊但「血量」較少）",
+            "attr": ["right"]
+        },
+        "Wy": {
+            "names": {
+                "jap": "ワイバーン",
+                "eng": "Wyvern",
+                "chi": "飛龍￨龍獸",
+                "can": "歪班"
+            },
+            "stat": [1,1,1,3,0,0],
+            "desc": "飛龍［瓦伊凡］。",
+            "attr": ["right"]
+        },
+        "Σ": {
+            "names": {
+                "jap": "ソロモン",
+                "eng": "Solomon",
+                "chi": "所羅門",
+                "can": "疏羅忙"
+            },
+            "stat": [0,0,0,14,0,0],
+            "desc": "傳說之魔術王［所羅門］。中央配置了金屬，使重心安定。",
+            "attr": ["right"]
+        }
+    },
+    "layer6r": {
+        "A": {
+            "names": {
+                "jap": "アビス",
+                "eng": "Abyss",
+                "chi": "深淵",
+                "can": "丫別樹"
+            },
+            "stat": [1,1,2,3,1,1],
+            "desc": "下段連打刃及上段 Smash 刃合為一體，瓦解對手體勢的同時也能以卸走地防禦。",
+            "attr": ["left"],
+            "type": "bal"
+        },
+        "B": {
+            "names": {
+                "jap": "ブレイブ",
+                "eng": "Brave",
+                "chi": "勇者￨勇武",
+                "can": "勃喱勃"
+            },
+            "stat": [4,0,0,6,0,3],
+            "desc": "大型橡膠刃的摩擦力抓住對手，並以橡膠的彈力施展回彈攻擊。",
+            "attr": ["right"],
+            "type": "att"
+        },
+        "C": {
+            "names": {
+                "jap": "カース",
+                "eng": "Curse",
+                "chi": "魔咒￨詛咒",
+                "can": "卡樹"
+            },
+            "stat": [0,4,1,2,1,0],
+            "desc": "配置在外側的五顆滾輪卸走攻擊，使其不受傷害。",
+            "attr": ["right"],
+            "type": "def"
+        },
+        "D": {
+            "names": {
+                "jap": "デス",
+                "eng": "Death",
+                "chi": "死亡",
+                "can": "爹樹"
+            },
+            "stat": [2,1,0,4,1,2],
+            "desc": "連打形狀下段刃削弱對手體力；大型 Upper 上段刃作致命一擊。",
+            "attr": ["right"],
+            "type": "bal"
+        },
+        "F": {
+            "names": {
+                "jap": "ファースト",
+                "eng": "First",
+                "chi": "原初￨創始",
+                "can": "花樹陀"
+            },
+            "stat": [3,0,0,0,2,1],
+            "desc": "Upper 刃把對手撞向空中。",
+            "attr": ["right"],
+            "type": "att"
+        },
+        "G": {
+            "names": {
+                "jap": "グライド",
+                "eng": "Glide",
+                "chi": "翱翔￨巡弋",
+                "can": "固拉墮"
+            },
+            "stat": [1,1,3,2,1,0],
+            "desc": "圓滑形狀的刃避過對手的攻擊；能開閉的三枚 Stamina Wing 能超強化離心力。",
+            "attr": ["right"],
+            "type": "sta"
+        },
+        "H": {
+            "names": {
+                "jap": "ホロウ",
+                "eng": "Hollow",
+                "chi": "虛無￨虛空",
+                "can": "呵羅"
+            },
+            "stat": [3,0,0,8,1,1],
+            "desc": "擁有左右形狀不同之刃的偏重心 Ring：能以大型金屬刃做成強力的打擊攻擊、及以裡面搭載金屬的三枚刃進行連打攻擊。",
+            "attr": ["right"],
+            "type": "att"
+        },
+        "I": {
+            "names": {
+                "jap": "インフィニット",
+                "eng": "Infinite",
+                "chi": "無盡￨無限",
+                "can": "in-fin列陀"
+            },
+            "stat": [4,0,0,4,1,2],
+            "desc": "一併持有以尖銳打擊刃把對手切裂、連打防禦刃把攻擊化解的攻守性能，還可加裝專用組件作模式轉變。（能力值為已加裝的攻擊模式）",
+            "attr": ["right", "addon"],
+            "type": "bal"
+        },
+        "J": {
+            "names": {
+                "jap": "ジェット",
+                "eng": "Jet",
+                "chi": "噴射",
+                "can": "即陀"
+            },
+            "stat": [1,5,0,4,1,0],
+            "desc": "搭載橡膠的外周刃向能令對手攻擊及衝擊無效化的方向自由迴轉；逆方向則固定以能夠吸收迴轉。",
+            "attr": ["right"],
+            "type": "def"
+        },
+        "K": {
+            "names": {
+                "jap": "キング",
+                "eng": "King",
+                "chi": "王者",
+                "can": "kin固"
+            },
+            "stat": [1,2,1,0,1,1],
+            "desc": "Upper 形狀五枚刃兼備連續攻擊力及卸走的防禦力。",
+            "attr": ["left"],
+            "type": "bal"
+        },
+        "M": {
+            "names": {
+                "jap": "ミラージュ",
+                "eng": "Mirage",
+                "chi": "幻象￨幻影",
+                "can": "滅啦住"
+            },
+            "stat": [1,1,4,2,1,0],
+            "desc": "外周完全被橡膠刃覆蓋，達至超吸收構造。",
+            "attr": ["left"],
+            "type": "sta"
+        },
+        "R": {
+            "names": {
+                "jap": "レイジ",
+                "eng": "Rage",
+                "chi": "狂怒￨狂暴",
+                "can": "喱字"
+            },
+            "stat": [3,0,0,8,0,2],
+            "desc": "超重量金屬龍給予對手連續打擊；羽毛形狀的 Upper 刃強烈地把對手撞飛。",
+            "attr": ["left"],
+            "type": "att"
+        },
+        "S": {
+            "names": {
+                "jap": "スーパー",
+                "eng": "Super",
+                "chi": "超級",
+                "can": "舒怕"
+            },
+            "stat": [3,0,0,0,1,2],
+            "desc": "尖銳大型 Upper 刃把對手撞向空中，並以連打刃切裂。",
+            "attr": ["right"],
+            "type": "att"
+        },
+        "T": {
+            "names": {
+                "jap": "テンペスト",
+                "eng": "Tempest",
+                "chi": "暴風￨風暴",
+                "can": "廳劈樹陀"
+            },
+            "stat": [3,0,1,7,0,2],
+            "desc": "四枚大與小的回彈刃把對手撞飛，而當回彈刃移動至最盡時就被固定，變成覺醒模式。",
+            "attr": ["right"],
+            "type": "att"
+        },
+        "V": {
+            "names": {
+                "jap": "バリアント",
+                "eng": "Variant",
+                "chi": "變幻￨異變",
+                "can": "霸列罌陀"
+            },
+            "stat": [1,4,1,0,0,0],
+            "desc": "以尖銳反擊刃與厚打擊刃交互地配置的連打形狀把攻擊擊退。",
+            "attr": ["right"],
+            "type": "def"
+        },
+        "W": {
+            "names": {
+                "jap": "ワールド",
+                "eng": "World",
+                "chi": "世界",
+                "can": "娃劣墮"
+            },
+            "stat": [2,2,2,4,0,1],
+            "desc": "反轉就可變成左或右迴轉；而且搭載了受強力衝擊時也不被擊爆的 Burst Lock。",
+            "attr": ["left","right"],
+            "type": "bal"
+        },
+        "+sw": {
+            "names": {
+                "jap": "インフィニットソード",
+                "eng": "Infinite Sword",
+                "chi": "無盡神劍",
+                "can": "in-fin列陀梳墮"
+            },
+            "desc": "四枚大型刃 Upper 刃強烈地把對手撞飛。【I】ring 專用組件，令其變成攻擊模式。",
+            "attr": ["right"],
+            "type": "att",
+            "for": ["I"]
+        },
+        "+sh": {
+            "names": {
+                "jap": "インフィニットシールド",
+                "eng": "Infinite Shield",
+                "chi": "無盡神盾",
+                "can": "in-fin列陀思劣墮"
+            },
+            "desc": "厚又粗糙的連打刃抵受仼何攻擊。【I】ring 專用組件，令其變成防禦模式。",
+            "attr": ["right"],
+            "type": "def",
+            "for": ["I"]
+        },
+        "Ｂ": {
+            "group": "LB",
+            "names": {
+                "jap": "バーン",
+                "eng": "Burn",
+                "chi": "燃燒￨爆燃",
+                "can": "班"
+            },
+            "stat": [7,1,0,8,2,3],
+            "desc": "四枚大型攻擊刃向對手作攻擊；對戰中 Lock 被擊退或受強烈衝擊時變形，以超大型四枚刃給予強力一擊。",
+            "attr": ["right"],
+            "type": "att"
+        },
+        "Ｔ": {
+            "group": "LB",
+            "names": {
+                "jap": "ジエンド",
+                "eng": "The-end",
+                "chi": "終末",
+                "can": "字N墮"
+            },
+            "stat": [2,8,2,9,0,1],
+            "desc": "分成兩層的鋸齒形反擊刃把對手擊退；對戰中 Lock 被擊退或受強烈衝擊時變形，兩層刃能自由迴轉，把仼何攻擊卸走。",
+            "attr": ["right"],
+            "type": "def"
+        },
+        "Ｖ": {
+            "group": "LB",
+            "names": {
+                "jap": "ボルケーノ",
+                "eng": "Volcano",
+                "chi": "火山",
+                "can": "播劣傾諾"
+            },
+            "stat": [3,3,4,5,2,1],
+            "desc": "五枚刃一併擁有卸走及攻擊能力；對戰中 Lock 被擊退或受強烈衝擊時變形，以十枚刃分散對手攻擊及以回彈刃決意反擊。",
+            "attr": ["left"],
+            "type": "bal"
+        }
+    },
+    "layer6s": {
+        "1A": {
+            "stat": [4,1,0,9,1,2],
+            "desc": "厚及凸出的大型打擊刃給予對手強烈一擊。",
+            "attr": ["right"],
+            "type": "att",
+            "deck": true
+        },
+        "2A": {
+            "stat": [4,0,1,8,0,4],
+            "desc": "巨大三枚橡膠刃勾住對手，給予強烈攻擊。",
+            "attr": ["right"],
+            "type": "att",
+            "deck": true
+        },
+        "3A": {
+            "stat": [5,0,0,8,1,2],
+            "desc": "槍狀巨大 Upper 刃由下鏟上對手。",
+            "attr": ["left"],
+            "type": "att",
+            "deck": true
+        },
+        "4A": {
+            "stat": [3,0,0,10,1,1],
+            "desc": "堅硬的 Lock 及左右重量不同的偏重心性能徹底提升攻擊力。",
+            "attr": ["left","right"],
+            "type": "att"
+        },
+        "1B": {
+            "stat": [2,3,2,7,0,1],
+            "desc": "平衡良好地配置的五枚刃一併擁有連續攻擊力及持久力。",
+            "attr": ["left","right"],
+            "type": "bal",
+            "deck": true
+        },
+        "2B": {
+            "stat": [4,0,1,10,2,2],
+            "desc": "調整【W】ring 的安裝方向就可切換至固定刃的攻擊或自由迴轉刃的防禦模式。（裝上其他 Ring 時只有一種模式・能力值為攻擊模式）",
+            "attr": ["left","right"],
+            "type": "bal",
+            "deck": true
+        },
+        "1D": {
+            "stat": [0,3,1,5,2,0],
+            "desc": "內重心形狀令旋轉軸難易晃動，且 Lock 堅硬。",
+            "attr": ["left","right"],
+            "type": "def"
+        },
+        "2D": {
+            "stat": [0,7,1,11,0,0],
+            "desc": "高速迴轉時展開的六枚障壁刃使仼何攻擊也無效化。（隨障壁刃磨耗逐漸轉變成攻擊性能）",
+            "attr": ["left","right"],
+            "type": "def",
+            "deck": true
+        },
+        "1S": {
+            "stat": [0,0,3,10,2,0],
+            "desc": "廣闊正圓且外重心的形狀，產心強力離心力。",
+            "attr": ["left","right"],
+            "type": "sta"
+        },
+        "2S": {
+            "stat": [1,2,4,9,1,1],
+            "desc": "薄型及廣闊形狀，提高離心力，特化於持久力。",
+            "attr": ["left","right"],
+            "type": "sta",
+            "deck": true
+        }
+    }
+}

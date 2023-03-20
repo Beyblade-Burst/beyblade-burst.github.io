@@ -1,0 +1,163 @@
+label,label::before,span::before {
+    display:flex;align-items:center;justify-content:center;
+}
+:host,div {
+    display:flex;
+}
+label,label::after,div {
+    transition:.5s;
+}
+:host {
+    position:fixed;left:0;bottom:0;
+    font-size:.8em;
+    z-index:99;
+    pointer-events:none;
+}
+label {
+    font-size:2em;
+    pointer-events:auto;
+}
+label::before,label::after {
+    color:var(--fg);
+    border-color:var(--bg);
+}
+label::before {
+    content:'\f24e';
+    border-radius:10em;border:0.1rem solid;
+    width:1.8em;height:1.8em;
+    z-index:1;
+}
+label::after {
+    content:'';font-size:0;
+    width:0;
+}
+#show:checked+label::after {
+    content:'重量級別對應';font-size:0.5em;
+    margin-left:-0.5em;
+    width:8em;padding:0.3em 0;
+    border:0.1rem solid;border-top-right-radius:5em;border-bottom-right-radius:5em;
+}
+label::before,label::after,div {
+    background:hsla(var(--c),60%,var(--bg-b),.9);
+}
+
+div {
+    overflow:scroll;
+}
+div::-webkit-scrollbar {
+    display:none;
+}
+div,data {
+    position:relative;
+}
+label,div::before,div::after,data:last-child::after,span,span::before {
+    position:absolute;
+}
+data::before {
+    content:attr(value);
+    font-weight:bold;font-size:1.25em;
+}
+data[value='9']~data::before,
+data[value='10']::before,
+data[value='10']~data::before {
+    color:red;
+}
+span::before {
+    content:'';
+    width:.3em;height:.3em;
+    background:var(--on);
+    border-radius:3em;
+}
+data:last-child::after {
+    content:'克';
+    font-size:.8em;
+}
+span {
+    color:var(--fg);
+    font-family:COND;
+}
+span[data-fusion]::after {
+    content:attr(data-fusion)'\00a0';
+    color:hsl(calc((var(--c) + 225)/2),80%,calc((var(--c) + 225)/8*1%));
+    font-style:italic;
+}
+:host(:is([group=layer5b],[group=layer5c])) span[data-fusion]::after {
+    color:inherit;
+}
+
+@media (orientation:landscape) and (min-width:900px) {
+    :host {
+        width:100%;--h:3.4rem; }
+    label[for='show'] {
+        left:0;bottom:100%; }
+    div {
+        width:100%;height:var(--h);
+        padding:.5rem .5rem 0 .5rem; }
+    #show~* {
+        transform:translate(0,var(--h)); }
+    #show:checked~* {
+        transform:translate(0,0); }
+    div::before {
+        content:'\f104';left:.35rem;top:.13rem; }
+    div::after {
+        content:'\f105';right:.35rem;top:.13rem; }
+    data {
+        width:50%;height:1.5rem;
+        line-height:2em;
+        border-top:1px solid;
+    }
+    data:not(:last-of-type) {
+        border-right:1px solid; }
+    data:last-of-type::after {
+        right:0;top:100%; }
+    span {
+        left:100%;bottom:0;
+        transform:translate(calc(.5px - 50%),100%);
+        white-space:nowrap;
+    }
+    span[data-fusion]::after {
+        margin-left:.25em; }
+    span::before {
+        left:50%;transform:translate(-50%,-.1em); }
+}
+@media (orientation:portrait),(max-width:899px) {
+    :host {
+        --w:4.6rem;height:calc(100% - 4.2rem); }
+    label {
+        bottom:0;left:100%; }
+    div {
+        width:var(--w);
+        padding:.75rem 0 .75rem .6rem;
+        flex-direction:column-reverse;justify-content:center; }
+    #show~* {
+        transform:translate(calc(-1*var(--w)),0); }
+    #show:checked~* {
+        transform:translate(0,0); }
+    div::before {
+        content:'\f106';left:.37rem;top:.3rem; }
+    div::after {
+        content:'\f107';left:.37rem;bottom:.3rem; }
+    data {
+        display:flex;justify-content:center;align-items:center;
+        height:50%;width:1.8rem;
+        border-left:1px solid;
+    }
+    data:not(:last-of-type) {
+        border-top:1px solid; }
+    data:last-of-type::after {
+        top:50%;right:-105%;transform:translate(0%,-50%); }
+    span {
+        display:grid;
+        text-align:left;line-height:.9rem;
+        top:0;left:2.2rem;
+        transform:translate(0,calc(-.5px - 50%));
+    }
+    span::before {
+        top:50%;transform:translate(-.6em,-50%); }
+    span[data-fusion]::after {
+        margin-left:-.1em;
+    }
+}
+@media (max-width:600px) and (max-height:600px) {
+    :host {height:100%;}
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='-33 -38 66 71'>
+    <path d='M 0,-38 
+        l 9,10 a 29.41,29.41,0,0,1,12,7 
+        h 4 a 32.97,32.97,0,0,1,0,42.5 h -4 
+        a 29.41,29.41,0,0,1,-42,0 
+        h -4 a 32.97,32.97,0,0,1,0,-42.5 h 4 
+        a 29.41,29.41,0,0,1,12,-7 l 9,-10 
+      M 0,-20 a 20,20,0,1,1,-0.1,0 Z' fill-rule='evenodd' fill='hsl(45,90%,38%)'/>
+    <g transform='translate(100,0)'>
+        <circle cx='0' cy='0' r='10' fill='hsl(45,90%,38%)'/>
+        <circle cx='0' cy='0' r='25.5' fill='transparent' stroke='hsl(45,90%,38%)' stroke-width='3'/>
+        <path id='q' d='M 7.5,-21.25 h -15 l -1.5,-2.25 -5,3 9.5,9.5 a 12,12,0,0,1,9,0 l 9.5,-9.5 -5,-3 -1,1.5' fill='hsl(45,90%,38%)'/>
+        <use href='#q' transform='rotate(90)' />
+        <use href='#q' transform='rotate(180)' />
+        <use href='#q' transform='rotate(270)' />
+    </g>
+    <view id='LC' viewBox='-33 -38 66 71' />
+    <view id='MGC' viewBox='73 -27 54 54' />
+</svg>

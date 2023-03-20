@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6,15,88,64.4600373359975" id="whole">
+<g id="layer" style="--c:135">
+  <path id="right" style="--c:135" d="M 89,15 A 2.658547158307394,2.658547158307394,0,0,1,91.20403548264626,19.145187862775206 L 80.50982966315146,35 L 60.509829663151464,35 L 74,15 Z"/>
+  <polygon id="middle" style="--c:135" points="67,15 53.50982966315147,35 33.50982966315147,35 47,15"/>
+  <path id="left" style="--c:135" d="M 11,15 A 2.658547158307394,2.658547158307394,0,0,0,8.795964517353738,19.145187862775206 L 19.49017033684853,35 L  26.50982966315147,35 L 40,15 Z"/>
+</g>
+  <polygon id="disk" style="--c:225" points="77.13728707893934,40 67.35691358472415,54.5 32.643086415275846,54.5 22.862712921060663,40"/>
+  <path id="driver" style="--c:315" d="M 63.98437100051202,59.5 L 36.01562899948798,59.5 L 47.20403548264627,76.08749475178537 A 3.3725425842121326,3.3725425842121326,0,0,0,52.79596451735373,76.08749475178537 Z"/>
+
+<!--script>
+const [angle,uw,uh,ug,vg,mh]=[Math.PI*56/180,20,20,7,5,14.5];
+const deductX=height=&gt;height*Math.tan(Math.PI/2-angle);
+const [initX,initY]=[94,15];
+  
+let [startX,startY]=[initX,initY];
+const d=5;
+let r=d*Math.tan(angle/2);
+let [afterX,afterY]=[r*Math.cos(Math.PI/2-angle)+initX-d, r*Math.sin(Math.PI/2-angle)+initY+r];
+
+document.querySelector('#right').setAttribute('d',`M ${initX-d},${initY} A ${r},${r},0,0,1,${afterX},${afterY} L ${startX-deductX(uh)},${uh+startY} L ${startX-deductX(uh)-uw},${uh+startY} L ${startX-uw},${startY} Z`);
+
+startX=startX-uw-ug;
+document.querySelector('#middle').setAttribute('points',`${startX},${startY} ${startX-deductX(uh)},${uh+startY} ${startX-deductX(uh)-uw},${uh+startY} ${startX-uw},${startY}`);
+  
+startX=startX-uw-ug;
+[afterX,afterY]=[r*Math.cos(Math.PI/2+angle)+100-initX+d, r*Math.sin(Math.PI/2+angle)+initY+r];
+document.querySelector('#left').setAttribute('d',`M ${100-initX+d},${startY} A ${r},${r},0,0,0,${afterX},${afterY} L ${100-initX+deductX(uh)},${uh+startY} L  ${startX-deductX(uh)},${uh+startY} L ${startX},${startY} Z`);  
+
+[startX,startY]=[initX-deductX(uh+vg),startY+uh+vg];
+document.querySelector('#disk').setAttribute('points',`${startX},${startY} ${startX-deductX(mh)},${mh+startY} ${100-startX+deductX(mh)},${mh+startY} ${100-startX},${startY}`);
+
+[startX,startY]=[startX-deductX(mh+vg),startY+mh+vg];
+let tip=initY+(initX-100+initX)/2*Math.tan(angle);
+[dx,dy]=[d*Math.cos(angle),d*Math.sin(angle)];
+r=d*Math.tan(Math.PI/2-angle);
+document.querySelector('#driver').setAttribute('d',`M ${startX},${startY} L ${100-startX},${startY} L ${50-dx},${tip-dy} A ${r},${r},0,0,0,${50+dx},${tip-dy} Z`);
+
+document.querySelector('svg').setAttribute('viewBox',`${100-initX},${initY},${initX-100+initX},${tip-dy+r-initY}`);
+</script-->
+<style>
+[style] {
+  fill:hsl(var(--c),65%,60%);
+}
+#whole:target * {
+  fill:hsl(45,90%,48%);
+}
+</style>
+</svg>

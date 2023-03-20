@@ -1,0 +1,91 @@
+{
+    "info": {
+        "BSB": "部分 2000 至 2002 年發售的陀螺之 Burst 復刻版。",
+        "MFB": "部分 2009 至 2010 年發售的陀螺之 Burst 復刻版。【GPr】及【MLd】的 Clear Wheel 能拆除，旋轉 180 度再裝上即可更換模式；【GPg】、【RUn】及【HKr】的 Clear Wheel 亦能拆除，並可互相交替裝上以作改造。",
+        "layer3": "除【nL】、【lS】、【Sr】及【Ω】外，其餘中央的 God Chip 都可換成 Metal God Chip，增加約 0.7 克的重量。<a href=/prize/#chip>〔<ruby><rb>擊</rb><rt>Strike</rt></ruby> God Chip〕</a>是【gV】專用，增加約 1.6 克的重量及把回彈刃固定。<br><i></i>【Sr】在其 Starter 商品有 1/72 機會購買到稀有黑色版。",
+        "layer4": "除【超】三機、【lα】及【rα】外，其他都可安裝 <a href=/prize/#chip>Level Chip</a>，增加約 0.7 克的重量及提升穩定性。<br><i></i>【rP】及【超A】在其 Starter 商品有 1/72 機會購買到稀有黑色版。",
+        "layer5": "一體化的 GT Layer，擁有〔無限 Lock〕功能。<br><i></i>B-153 及 157 商品都有 1/72 機會購買到 <a href=https://youtu.be/Lqg34PcCFEM target=_blank>Gold Turbo</a> 版 Layer。",
+        "layer6c": "如圖片所示，「重量」一項已包含 Chip Core 之重量。替換成 <a href=/prize/#chip>Metal Chip Core</a> 後，增加約 0.7 克的重量。",
+        "layer6s": "<ul><li><dfn class=double>Double Chassis</dfn>：已含內置 Disk，不能再加裝<li><dfn class=single>Single Chassis</dfn>：能使用以往的 Disk 及 Frame</ul><i></i>超王系列的所有 B- Starter、Booster、Triple Booster 都有 1/72 機會（每三箱一盒）購買到塗裝金屬版 Chassis，B-167 起上調至 1/24（每一箱一盒）。",
+        "layer7b": "〔究極合體〕系統：能分拆及與彼此或另一自身組合，共有十款可能性：（全被視為不同的 Blade）<img src=https://pbs.twimg.com/media/Fec5oNpaMAAKyVy?format=jpg alt='Ultimate Fusion'>",
+        "layer7c": "把 Armor 放在 Blade 之上、Core 放在 Blade 之下，就是 High（高重心）模式，相反就是 Low（低重心）模式。Low 模式時、或使用【H Gear】時不論模式，只能使用〘DB〙系統起新推出的 Disk。<img src=https://beyblade-burst.takaratomy.co.jp/category/img/BU_img.png alt=DB><br>〔BU Lock〕功能：設有突起，能與同樣有 BU Lock 的 Disk 摩擦，加強擊爆抵耐性。",
+        "LB": "〔<ruby><rb>限界突破<rt>Limit Break</ruby>〕系統，能在 Lock 被擊退後發動變形機能。下面三款 Ring 及 Disk 只能互相組合，不可搭配本頁以外的 Ring／Layer／Disk。Ring 則可裝上仼何超王 Chip，但不能裝上 Chassis。Disk 上的「指針」亦決定了〔限界突破〕機關發動的時機，左／右迴轉時也不同。<img src=/img/SP-flow.jpg>",
+        "dash": "使用強化彈簧，更難被對手擊爆。",
+        "high": "高度提升約 4mm，改變 Layer / Disk 的攻擊及被攻擊的位置，但同時更容易失平衡倒下。",
+        "metal": "上面部份由 POM 塑膠改成金屬素材，提升約 2.2 克的重量。但上部與 Layer 的 Lock 齒位接觸的突起比較幼小，故雖已使用強化彈簧，抵抗被擊爆能力較低。2021 年 9 月前製造的 Metal Driver 上的突起較大，對 Layer 齒位的損耗急速。"
+    },
+    "title": {
+        "layer3": "〘神〙 攻擊環 結晶輪盤 Layer",
+        "layer4": "〘超Ｚ〙 攻擊環 結晶輪盤 Layer",
+        "layer5w": "〘GT〙 重心鐵 配重鐵 Weight", 
+        "layer5c": "〘GT〙 紋章 Chip", 
+        "layer5b": "〘GT〙 攻擊環底 基座 Base",
+        "layer5": "〘GT〙〔無限 Lock〕 攻擊環 結晶輪盤 Layer",
+        "layer6s": "〘超王〙 重心盤 底盤 Chassis",
+        "layer6c": "〘超王〙 紋章 Chip",
+        "layer6r": "〘超王〙 刃輪 戰輪 Ring",
+        "LB": "〘超王〙〔限界突破〕 刃輪 戰輪 Ring & 金屬 鋼鐵 輪盤 Disk",
+        "layer7a": "〘DB〙 裝甲 戰甲 Armor", 
+        "layer7b": "〘DB〙 刀環 戰刃 Blade",
+        "layer7c": "〘DB〙 核心 Core", 
+        "layer7": "〘DB〙 攻擊環 結晶輪盤 Layer",
+        "MFB": "〘復刻〙 鋼鐵戰魂 鋼鐵奇兵 攻擊環 結晶輪盤 Metal Fight Beyblade Layer", 
+        "BSB": "〘復刻〙 攻擊環 結晶輪盤 Bakuten Shoot Beyblade Layer",
+        "frame": "結晶環 戰環 Frame", 
+        "dash": "〔強化彈簧〕 軸心 底盤 Driver",
+        "high": "〔高度提升〕 軸心 底盤 Driver",
+        "metal": "〔金屬 Lock〕 軸心 底盤 Driver"
+    },
+    "label": {
+        "layer7a": "Armor", "layer7b": "Blade", "layer7c": "Core", "layer6s": "Chassis", "layer6r": "Ring", "layer6c": "Chip", "layer5b": "Base", "layer5w": "Weight", "layer5c": "Chip",
+        "layer7": "DB", "layer5": "GT", "layer4": "超 Ƶ", "layer3": "神", "layer2": "Dual", "layer1": "Single", 
+        "round": "", "sharp": "", "flat": "", "multi": "", "dash": "⌇", "high": "⇪", "metal": "✨"
+    },
+    "layer": {
+        "金屬": {
+            "all": true,
+            "groups": ["layer7", "layer5", "layer4", "MFB"]
+        },
+        "塑膠": {
+            "all": true,
+            "title": "攻擊環 結晶輪盤 Layer",
+            "groups": ["layer3", "layer2", "layer1", "BSB"]
+        },
+        "GT": {
+            "info": "<i></i>B-139 至 157 的陀螺商品除 Random Layer 外，都有 1/72 機會購買到 <a href=https://youtu.be/Lqg34PcCFEM target=_blank>Gold Turbo</a> 版 Base 及 Chip。Random Booster 中，則只有 01（大籤王）的 Base 有機會是 Gold Turbo 版。",
+            "groups": ["layer5c", "layer5w", "layer5b"]
+        },
+        "超王": {
+            "groups": ["layer6c", "layer6r", "layer6s", "LB"]
+        },
+        "DB": {
+            "groups": ["layer7c", "layer7b", "layer7a"]
+        }
+    },
+    "disk": {
+        "單體": {
+            "all": true,
+            "info": "〘DB〙Layer 使用 Low 模式時，只能搭配有  標示的 Disk；使用 High 模式時，則可使用仼何 Disk。 的 Disk，同時亦能搭配過去的一般 Layer。<br><br>〔BU Lock〕：設有突起，能與同樣有 BU Lock 的〘DB〙Core 摩擦及加強與 Driver 的緊合度，加強擊爆抵耐性。",
+            "title": "金屬 鋼鐵 輪盤 Disk",
+            "groups": ["disk2", "disk1"]
+        },
+        "加裝": {
+            "info": "每個 Core Disk 都可選擇性加裝一個 Frame。",
+            "title": "結晶環 戰環 Frame",
+            "groups": ["core", "frame"]
+        }
+    },
+    "driver": {
+        "標準": {
+            "all": true,
+            "info": "<ul><li><dfn class=fusion>Disk 一體型 Driver</dfn>：已含內置 Disk，不能再加裝。此類 Driver 中只有附  標示的才能搭配〘DB〙Layer 的 Low 模式。<li>：有強化組件可選擇加裝<li>⌇：有 Dash 版<li>⇪：有 High 版<li>✨：有 Metal 版</ul>※ Ig′ 沒有普通版",
+            "title": "軸心 底盤 Driver",
+            "groups": ["flat", "sharp", "round", "multi", "extra"]
+        },
+        "衍生": {
+            "all": true,
+            "title": "軸心 底盤 Driver",
+            "groups": ["dash", "metal", "high"]
+        }
+    }
+}

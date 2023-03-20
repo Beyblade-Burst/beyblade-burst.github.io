@@ -1,0 +1,443 @@
+:is(form,#filter) summary {
+    list-style:revert;
+}
+::-webkit-details-marker {
+    display:initial;
+}
+form,#filter {
+    max-width:900px;
+    margin:auto;
+}
+form {
+    padding:0 0.5em 0.5em 0.5em;
+}
+form,form a {
+    display:flex;justify-content:center;align-items:center;
+}
+form a[href] {
+    margin:0.5em 0;
+    color:var(--on);
+}
+#link {
+    stroke:hsl(var(--c),90%,var(--on-b));
+    fill:hsl(var(--c),90%,var(--theme-b));
+}
+form a svg {
+    width:7em;
+}
+form a span {
+    position:absolute;
+}
+form a:first-of-type span::before,form a:last-of-type span::after {
+    content:attr(data-icon);
+    display:block;
+    margin:.2em 0;
+}
+form details {
+    width:48%;
+    max-width:250px;
+    margin:auto;
+}
+form fieldset {
+    padding:0;margin:-.3em 0 0 0;
+    border:none;
+}
+form details:not([open]) summary {
+    margin-bottom:8em;
+}
+form summary *,caption>* {
+    vertical-align:middle;
+}
+form summary span {
+    display:inline-block;
+    width:7em;
+    line-height:1.5em;
+    font-size:.6em;
+    margin-top:.3em;
+}
+form summary span::first-line {
+    font-size:1.62em;
+}
+form button {
+    background:var(--theme);
+    width:1.5em;height:1.5em;
+    border:none;border-radius:50%;
+    font-size:1.8em;color:white;
+    padding:0;
+}
+form p {
+    padding:.2em .8em;margin:.5em 0;
+    text-align:right;line-height:1.2em;
+    position:relative;
+    background:linear-gradient(-57deg,transparent 1.1em,var(--bg) 1.1em,var(--bg) calc(100% - 1.1em),transparent calc(100% - 1.1em));
+}
+form .layer:first-of-type {
+    padding-top:1.4em;margin-top:1em;
+}
+form p input {
+    width:45%;
+    padding:0 .2em;margin:0 1.5em 0 .1em;
+    border:.05em solid grey;
+}
+label[for=DB],label[for=SP],label[for=GT] {
+    position:absolute;top:0;transform:translate(0,-40%);
+    filter:saturate(0);
+}
+label[for=DB] {
+    left:1.7em;
+}
+label[for=SP] {
+    left:5.5em;
+}
+label[for=GT] {
+    right:-.3em;
+}
+form label img {
+    height:2.5em;
+}
+#DB:checked~main label[for=DB],
+#SP:checked~main label[for=SP], 
+#GT:checked~main label[for=GT] {
+    filter:saturate(1);
+}
+
+#filter {
+    padding:0 0.5em;
+}
+#filter summary {
+    text-align:left;
+    padding:.2em 0;
+    margin-bottom:.3em;
+}
+#filter summary i {
+    font-style:italic;
+    color:var(--on);
+}
+#filter div {
+    margin:0 0 .5em 1em;
+    display:flex;justify-content:space-between;flex-wrap:wrap;
+    gap:.5em;
+}
+#filter span {
+    text-align:left;text-indent:1em;
+    display:block;
+    margin-bottom:.3em;
+}
+#filter div:nth-of-type(2)::after {
+    min-width:8em;
+    content:'';
+}
+#filter div:not(.system) label {
+    min-width:8em;
+    border:.08rem solid;border-radius:9em;
+    padding:.25em .5em;
+}
+#filter .system label {
+    width:5em;
+}
+#filter .system img {
+    height:3em;
+}
+#filter button {
+    margin-left:.5em;
+}
+/*caption*/
+:is(#regular:not(.new),.searching) caption>:not(label),.loading>*,.loading~* {
+    display:none !important;
+}
+:is(#regular:not(.new),.searching) caption {
+    text-align:right;
+}
+table {
+    border-spacing:0;
+    white-space:nowrap;
+    margin:auto;
+}
+caption:not(:empty) {
+    margin:.5em auto;
+}
+caption.loading::after {
+    content:'';
+    font-size:2em;
+    display:inline-block;
+    animation:spin 1s infinite;
+}
+@keyframes spin {to {transform:rotate(360deg);}}
+#filter button,caption button {
+    padding:0 .5em;
+    background:none;
+    border:.1em solid;border-radius:5em;
+}
+label[for=jap],label[for=eng] {
+    width:1.5rem;height:1.5rem;
+    border-radius:9em;
+    display:inline-flex;justify-content:center;align-items:center;
+    margin-left:.2em;
+    border:.1em solid;
+}
+#jap:checked~main label[for=jap],
+#eng:checked~main label[for=eng] {
+    color:black;
+    background:coral;border-color:coral;
+}
+#eng[disabled]~main label[for=eng] {
+    filter:saturate(0%);
+}
+/*thead*/
+.comp .tablesorter-header-inner,td {
+    cursor:pointer;
+}
+.tablesorter-header-inner {
+    display:flex;justify-content:center;align-items:center;
+    font-weight:normal;
+}
+.comp .tablesorter-header-inner {
+    height:2.5em;width:calc(100% - 0.2em);
+    margin:0 auto .3em auto;padding-top:.3em;
+    border-top:.2em solid hsl(var(--c),50%,var(--theme-b));
+    line-height:1.2;
+    transition:border .5s;
+}
+.comp th:first-child .tablesorter-header-inner {
+    height:5.6em;
+    border-color:hsl(0,0%,var(--theme-b));
+}
+th[data-sortedby] .tablesorter-header-inner {
+    border-color:hsl(var(--c),100%,55%);
+}
+th:first-child[data-sortedby] .tablesorter-header-inner {
+    border-color:hsl(0,0%,55%);
+}
+.comp th:nth-child(5) {
+    min-width:6.5em;
+}
+.comp th:last-child {
+    min-width:6em;
+}
+.comp .tablesorter-header-inner:hover {
+    filter:brightness(90%);
+}
+.note .tablesorter-header-inner {
+    border-radius:5em;
+    height:3.2em;width:calc(97% - 0.2em);
+    position:relative;
+    margin:0 auto calc(0.5em/0.75) auto;
+    background:var(--overlay2);
+}
+.note .tablesorter-header-inner span {
+    text-align:left;
+}
+.note .tablesorter-header-inner::before {
+    content:'';
+    position:absolute;bottom:-0.5em;
+    z-index:-1;
+    width:0;height:0;
+    border-style:solid;border-width:1em 1.5em 0 0;
+    border-color:var(--overlay2) transparent transparent transparent;
+}
+.note .tablesorter-header-inner::before {
+    left:1.5em;
+}
+.note th:nth-of-type(3)>*::before {
+    left:1em;
+}
+th img {
+    width:1em;
+    margin:0 0 0.2em 0.2em;
+    vertical-align:middle;
+}
+th ruby {
+    margin:0 -0.4em;
+}
+th rt {
+    font-size:70%;
+}
+/*tbody*/
+tbody tr {
+    text-align:left;
+    height:1.4rem;
+}
+tr.hidden,#regular.new .old {
+    display:none;
+}
+td {
+    position:relative;
+    padding:0;
+    z-index:1;
+}
+td[data-part],td:first-child,td::after {
+    font-family:MONO,COND,MAIN;
+}
+td[data-part],td:first-child {
+    width:.1em;
+    padding:0 var(--pad);
+}
+.BSB td[data-part*=V2] {
+    transform:scaleX(.9);
+    padding:0;
+    letter-spacing:-.025em;
+    text-align:center;
+}
+td:nth-child(5)[data-part$=layer5c],td[data-part$=disk] {
+    text-align:right;
+}
+tr[data-abbr*='-'] td:nth-child(8) {
+    text-align:center;
+}
+/*below td*/
+td>*:not([onclick]) {
+    pointer-events:none;
+}
+td s {
+    text-decoration:none;
+}
+td:not([class]) s {
+    display:none;
+}
+td.right[colspan] s {
+    margin:0 .1em;
+}
+td:not([data-part])::after {
+    margin-left:.3em;
+    opacity:.7;
+}
+:is(td[data-more='0']:not([data-part]),td[data-more='0']+.left,td[data-more='0']+.left+.right)::after {content:'/' var(--more0);}
+:is(td[data-more='1']:not([data-part]),td[data-more='1']+.left,td[data-more='1']+.left+.right)::after {content:'/' var(--more1);}
+td[data-part*='+'][data-part*=driver]:not([data-part*='Xt+'])::after {content:'\00a0';}
+
+.right i:last-child {
+    margin-right:-.1em;
+}
+td[data-part$=driver] i,td sup {
+    position:absolute;
+}
+td sup {
+    top:-.1em;right:-.1em;
+}
+td[data-part='HXt+′.driver'] sup {
+    margin:.2em .1em 0 -.1em;
+}
+td:not([data-part]) sub {
+    line-height:0;
+}
+:is(td[data-part$=disk],td[data-part$=driver]) sub {
+    position:absolute;bottom:0;
+    letter-spacing:-.05em;
+}
+td[data-part='HXt+′.driver']~td sub {
+    position:relative;
+    margin-right:-.4em;
+}
+td[data-part='Nx+S.disk'] sub {
+    margin-left:-.8em;
+}
+td img {
+    position:absolute;right:.1em;top:50%;transform:translate(0,-50%);
+    width:1.2em;
+    z-index:-1;
+}
+/*border*/
+tbody {--pad:.25em;}
+tbody tr:last-child td {
+    border-bottom:solid .5px var(--on);
+}
+tbody td {
+    border-top:solid .5px var(--on);
+}
+td:first-child {
+    border-right:solid .5px var(--on);
+}
+:is(.right,tr[data-abbr*='-'] td:nth-child(8)):not(.fusion)+td {
+    border-left:solid .5px var(--on);
+}
+#eng:not(:checked)~main table:not(.bilingual) .left+.right,
+#eng:checked~main .left,
+.bilingual .left {
+    padding:0 var(--pad);
+    border-left:solid .5px hsl(0,0%,55%);
+}
+.bilingual .right {
+    padding-right:var(--pad);
+}
+#eng:not(:checked)~main table:not(.bilingual) .left,
+#eng:checked~main table:not(.bilingual) .right,
+#jap:checked~main .left {
+    font-size:0;
+}
+.bilingual label[for=eng],
+#jap:not(:checked)~main .bilingual u, 
+#jap:not(:checked)~main .bilingual .left::after {
+    display:none;
+}
+.bilingual td:is([data-part='Ul′.driver'],[data-part='MD.driver'],[data-part='MDs.driver'])+.left {
+    letter-spacing:-.02em;
+}
+#jap:checked~main td[data-more]:is([data-part='F′.driver'],[data-part="X′.driver"],[data-part='FF.layer7c'])+td+.right,
+#jap:checked~main .small {
+    letter-spacing:-.05em;
+}
+tfoot {
+    visibility:hidden;
+}
+/*other*/
+.catalog {
+    flex-direction:column;
+}
+#BBG:not(:target),.searching~.boards {
+    display:none;
+}
+/*font-size*/
+.left.small,td[data-part="MD.driver"]+.left {
+    font-family:COND;
+}
+.note .tablesorter-header-inner {
+    font-size:0.75em;
+}
+input::placeholder,form details label,form a,#filter,td sub,td:not([data-part])::after {
+    font-size:0.8em;
+}
+form p input,caption,caption button,#filter button,.right.small,td[data-more][data-part="X′.driver"]+td+.right {
+    font-size:0.9em;
+}
+.catalog {
+    font-size:1.1em;
+}
+#BBG caption {
+    font-size:1.2em;
+}
+form a span::before,form a span::after,caption span {
+    font-size:1.4em;
+}
+    
+thead {font-size:min(3vw,.9em);}
+tbody {font-size:min(2.75vw,.8em);}
+.bilingual thead {font-size:min(2vw,.9em);}
+.bilingual tbody {font-size:min(1.68vw,.8em);}
+#eng:checked~main tbody {font-size:min(2.53vw,.8em);}
+#jap:checked~main tbody {font-size:min(2.26vw,.8em);}
+/*color*/
+tbody tr,#filter div:not(.system) label,.boards li {
+    --color:hsl(var(--row-c,0),calc(var(--row-s,50%) + var(--s-adj,0%)),calc(var(--row-b,35%) + var(--b-adj,0%)));
+    background:var(--color);
+}
+.day {--row-s:85%;--row-b:90%;}
+td:first-child      {color:deepskyblue;}
+.day td:first-child {color:blue;}
+.RB {--row-s:0%;--b-adj:5%;}
+.St {--row-c:250;}
+.B  {--row-c:10;}
+.RL {--row-c:135;--b-adj:-5%;}
+.L  {--row-c:45;}
+.S  {--row-c:200;}
+.H  {--s-adj:-20%;--b-adj:-10%;}
+.day .RL.H {--b-adj:-20%;}
+
+tr[style]:is(.layer3,.layer4) td[data-part$=layer],
+tr[style].layer5 td[data-part$=layer5b],
+tr[style].layer5 td[data-part$=layer],
+tr[style].layer5:not(.RB) td[data-part$=layer5c],
+tr[style].layer6 td[data-part$=layer6s],
+tr[style][data-no=B-175] td[data-part$=disk],
+tr[style][data-no=B-187] td[data-part]:not([data-part$=layer7a]):not([data-part$=disk]),
+tr[style][data-no=B-196] td[data-part]
+{color:var(--rare);}

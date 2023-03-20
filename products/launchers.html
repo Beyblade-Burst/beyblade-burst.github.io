@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<script src=/include/common.js></script>
+<title>陀螺商品 ￭ Products ￨ 戰鬥陀螺 爆烈世代 ￭ 爆旋陀螺 擊爆戰魂 ￭ Beyblade Burst ￭ ベイブレードバースト</title>
+<link rel=stylesheet href=products.css>
+<link rel=stylesheet href=/include/component.css>
+<style>
+    main {
+        max-width:1000px;
+        margin:auto;
+    }
+</style>
+
+<nav><script>nav(['/','/products/'])</script></nav>
+<db-status></db-status>
+<main class=groups>
+    <h1 style='display:none'>發射器</h1>
+    <h2>拉線型</h2>
+    <h2>拉條型</h2>
+</main>
+
+<script>
+const listing = (details, colors) => 
+    details.Q('ol').innerHTML = colors.reduce((html, [classes, no, img, notes]) => html +=
+    `<li class='${classes.split(' ').map(c => listing.spin[c] ?? c).join(' ')}'${notes?.error ? ` data-error='※${notes.error}'` : ``}>
+        <code>${no}</code>
+        <img src='${listing.src([, no, img])}' alt='${details.Q('h3').innerText}'>
+        ${listing.winder[notes?.note] ?? notes?.note ?? ''}
+    </li>`, '');
+listing.src = ([, no, href]) => /^https|\/img/.test(href) ? href : /^.\//.test(href) ? `https://takaratomymall.jp/img/goods/${href}.jpg` : `https://pbs.twimg.com/media/${href}?format=jpg&name=large`;
+listing.spin = {l: 'left', r: 'right'}; 
+listing.winder = {
+    DW: `<ruby><rb>ドラゴンワインダー<rt>Dragon winder</ruby>`,
+    PW: `<ruby><rb>フェニックスワインダー<rt>Phoenix winder</ruby>`,
+    LW: `<ruby><rb>ロングワインダー<rt>Long winder</ruby>`
+};
+(async () => {
+    await DB.open();
+    let launchers = await DB.get('html', 'prod-launcher');
+    launchers || DB.put('html', ['prod-launcher', launchers = await (await fetch('/db/prod-launcher.json')).json()]);
+    
+    for (let {eng, jap, desc, colors} of launchers.reverse()) {
+        let details = Object.assign(document.createElement('details'), {
+            innerHTML: `
+            <summary>
+                <h3>${jap}<br>${eng}</h3>
+                <small>${desc}</small>
+                <picture><img alt='${eng}' src=${listing.src(colors[1] || colors[0])}></picture>
+            </summary>
+            <ol class=boards></ol>`
+        });
+        details.Q('summary').addEventListener('click', () => listing(details, colors), {once: true});
+        Q(`h2:nth-of-type(${eng.includes('Bey launcher') ? 1 : 2})`).after(details);
+    }
+})();
+</script>
