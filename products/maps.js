@@ -2,11 +2,11 @@ Mapping.maps = {
     ...Mapping.maps,
     image: new Mapping(
         /^BG-0[123]/, '${}',
-        /^BA-01/, 'FdFD0c-aUAAyLJg', 'BA-02', 'FdFD0c8akAAzpL1', /^BA-03/, 'FdFD0c9aAAAZMxd', 'BA-04', 'FdFD0dFaEAMG3N6',
+        /^BA-01/, 'FyFMeSOaAAAClw9', 'BA-02', 'FyFMfaSaMAEQbhY', /^BA-03/, 'FyFMfa3aAAUnljR', 'BA-04', 'FyFMfbhaAAEW-mC',
 
-        'BBG-02', 'FdEX7ctaMAAC_pb', 'BBG-09', 'FdEX7chaEAEIUiz', 'BBG-13', 'FdEX7cnaMAE9Oxq',
-        'BBG-15', 'FdEVTUsagAIDd94', 'BBG-20', 'FdEVTVRacAEiCOV', 'BBG-28', 'FdEVTWFagAAvXGj', 'BBG-33', 'FdEVamYaIAMasXw',
-        /^BBG-21/, 'FdEVTVnaAAEOhcD', /^BBG-31/, 'FdEVal4aIAYOI6U', /^BBG-35/, 'FdEVanAaAAAXaLo', /^BBG-36/, 'FdEVanMaMAUbtuF', /^BBG-42/, 'FdFCfzLaUAIOGv9',
+        'BBG-02', 'FyJl4FDaUAAAyjE', 'BBG-09', 'FyJl49XaIAItnPl', 'BBG-13', 'FyJl5c6acAEp7er',
+        'BBG-15', 'FyGXqZUaQAE1hXc', 'BBG-20', 'FyGXrgEagAA5kq4', 'BBG-28', 'FyGXtdqaIAIU4BZ', 'BBG-33', 'FyGXuOzaYAARAO1',
+        /^BBG-21/, 'FyFBif8aEAARU6k', /^BBG-31/, 'FyFBrltaUAEiTFW', /^BBG-35/, 'FyFBjNOaMAElrAA', /^BBG-36/, 'FyFBrmIaQAA2bR-', /^BBG-42/, 'FyFBj2gagAAEuds',
         
         'BBG-07', 'BB-00',  'BBG-18', 'B_00_emperorF',  'BBG-37', 'B-00_bbg37',  'BBG-40', 'b220701',
         /^BBG-(19|22|27)/, no => no.replace('BBG-', 'BBG'),
@@ -29,7 +29,7 @@ Mapping.maps = {
         [196.1,157,156.1,155,154,153.2,153.1,151.1,150,149.2,149.1,148,146.1,145.2,145.1,144,142,140.1,139], 'goldenrod'
     ),
     rate: new Mapping(
-        202,       '04 機率 5/24 至 1/4；05 機𠅋 7/24；02 機𠅋 1/8 至 1/6，其餘各 1/6',
+        202,       '04 機率 5/24 至 1/4；05 機率 7/24；02 機𠅋 1/8 至 1/6，其餘各 1/6',
         196,       '04、05 機率各 1/6；其餘每箱不同，介乎 1/6 至 1/4；金色版 01 機率小於 1/72',
         194,       '01、06、07 機率各 1/6；其餘各 1/8',
         [198,186,181], '01 機率 1/8；03 機率 5/24；其餘各 1/6',

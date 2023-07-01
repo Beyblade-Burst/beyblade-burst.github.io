@@ -190,7 +190,7 @@
         Q('label[for=popup]').replaceChildren(...(/\${i}/.test(url) ? [1,2,3,4] : /\${a}/.test(url) ? ['a','b','c'] : [1]).map(t => image(url.replace(/\${[ai]}/, t))));
         Q('#popup').checked = true;
     });
-    const image = url => Object.assign(document.createElement('img'), {src: /^(http|\/)/.test(url) ? url : 'https://beyblade-burst.takaratomy.co.jp/' + url});
+    const image = url => Object.assign(document.createElement('img'), {src: /^(http|\/)/.test(url) ? url : 'https://beyblade.takaratomy.co.jp/burst/public_html/' + url});
 
     location.hash && Q(location.hash)?.setAttribute('open', true);
 </script>

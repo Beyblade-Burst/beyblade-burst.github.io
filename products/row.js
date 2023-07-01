@@ -168,7 +168,7 @@ const Preview = type => {
 };
 Object.assign(Preview, {
     popup: Q('label[for=popup]'),
-    src: href => /^https|\/img\//.test(href) ? href : href.length >= 15 ? `https://pbs.twimg.com/media/${href}?format=png&name=large` : `https://beyblade-burst.takaratomy.co.jp/category/img/products/${href}.png`,
+    src: href => /^https|\/img\//.test(href) ? href : href.length >= 15 ? `https://pbs.twimg.com/media/${href}?format=png&name=large` : `https://beyblade.takaratomy.co.jp/burst/public_html/category/img/products/${href}.png`,
     image: ({parentNode: tr}) => {
         Preview.popup.classList.remove('catalog');
         Preview.popup.title = Mapping.maps.rate.find(tr.no.match(/\d+/));

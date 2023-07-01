@@ -50,7 +50,7 @@
     #cell-f-5    {opacity:var(--fusion,0);}
     #line-o   {opacity:var(--odd-line,0);}
     #line-v   {opacity:var(--even-line,0);}
-    #cell-n-6 {opacity:calc(1 - var(--fusion)); fill:var(--heavy-fill); cx:var(--circle-x);}
+    #cell-n-6 {opacity:calc(1 - var(--fusion)); fill:var(--heavy-fill);}
     #cell-f-6 {opacity:var(--fusion,0); fill:var(--heavy-fill);}
     #dl-6 use:nth-of-type(odd)  {--odd-line:1;--circle-x:139;}
     #dl-6 use:nth-of-type(even) {--even-line:1;--circle-x:127;}
@@ -252,5 +252,9 @@
     Q('feDropShadow').setAttribute('dx', +q.day || 0);
     Q('feDropShadow').setAttribute('dy', -q.day || 0);
     Q('feDropShadow').setAttribute('flood-opacity', q.day ? .15 : .8);
+
+    navigator.userAgent.toLowerCase().includes('safari') && !navigator.userAgent.toLowerCase().includes('chrome') ? 
+        Q('#cell-n-6').setAttribute('cx', 'var(--circle-x)') : 
+        Q('style').append('#cell-n-6 {cx:var(--circle-x);}');
     // ]]></script>
 </svg>

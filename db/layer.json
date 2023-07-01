@@ -1291,7 +1291,7 @@
             "can": "固喱剔舒拖啦花L劣"
         },
         "stat": [4,4,4,14,4,2],
-        "desc": "大天使［拉斐爾］。DB Core、Armor、Blade 一體型，在強力發射時發動〔Overdrive System〕：迴轉減慢時 Armor 彈起變形、內藏的金屬部件移動以提升持久；從外重心八枚刃的攻擊模式變成內重心零枚刃的防禦模式，亦發動金屬 Burst Lock。",
+        "desc": "大天使［拉斐爾］。DB Core、Armor、Blade 一體型，在強力發射時發動〔Overdrive 系統〕：迴轉減慢時 Armor 彈起變形、內藏的金屬部件移動以提升持久；從外重心八枚刃的攻擊模式變成內重心零枚刃的防禦模式，亦發動金屬 Burst Lock。",
         "attr": ["right"],
         "type": "bal"
     },
