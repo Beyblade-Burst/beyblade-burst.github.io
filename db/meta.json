@@ -65,7 +65,7 @@
     "disk": {
         "單體": {
             "all": true,
-            "info": "〘DB〙Layer 使用 Low 模式時，只能搭配有  標示的 Disk；使用 High 模式時，則可使用仼何 Disk。 的 Disk，同時亦能搭配過去的一般 Layer。<br><br>〔BU Lock〕：設有突起，能與同樣有 BU Lock 的〘DB〙Core 摩擦及加強與 Driver 的緊合度，加強擊爆抵耐性。",
+            "info": "〘DB〙Layer 使用 Low 模式時，只能搭配有  標示的 Disk；使用 High 模式時，則可使用仼何 Disk。 的 Disk，同時亦能搭配過去的一般 Layer。<br><br>〔BU Lock〕：設有突起，能與同樣有 BU Lock 的〘DB〙Core 摩擦及加強與 Driver 的緊合度，加強擊爆抵耐性。",
             "title": "金屬 鋼鐵 輪盤 Disk",
             "groups": ["disk2", "disk1"]
         },
@@ -78,7 +78,7 @@
     "driver": {
         "標準": {
             "all": true,
-            "info": "<ul><li><dfn class=fusion>Disk 一體型 Driver</dfn>：已含內置 Disk，不能再加裝。此類 Driver 中只有附  標示的才能搭配〘DB〙Layer 的 Low 模式。<li>：有強化組件可選擇加裝<li>⌇：有 Dash 版<li>⇪：有 High 版<li>✨：有 Metal 版</ul>※ Ig′ 沒有普通版",
+            "info": "<ul><li><dfn class=fusion>Disk 一體型 Driver</dfn>：已含內置 Disk，不能再加裝。此類 Driver 中只有附  標示的才能搭配〘DB〙Layer 的 Low 模式。<li>：有強化組件可選擇加裝<li>⌇：有 Dash 版<li>⇪：有 High 版<li>✨：有 Metal 版</ul>※ Ig′ 沒有普通版",
             "title": "軸心 底盤 Driver",
             "groups": ["flat", "sharp", "round", "multi", "extra"]
         },

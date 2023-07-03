@@ -36,7 +36,7 @@ class Part {
             this.desc = {
                 dash: `內藏${this.sym == 'Br′' ? '<em>普通</em>': '強化'}彈簧的【${sym}】driver。`,
                 high: this.sym == 'HXt′' ? `（把【HXt+′】driver 換上【Xt】的 Chip 後）` : `高度提升${/′/.test(this.sym) ? '、又內藏強化彈簧' : ''}的【${sym}】driver。`,
-                metal: `搭載金屬 Lock 部件、又內藏強化彈簧的【${sym}】driver。`
+                metal: `搭載金屬 Lock 組件、又內藏強化彈簧的【${sym}】driver。`
             }[this.group];
         },
         has: () => this.has = [

@@ -312,6 +312,9 @@ a:is(.dash,.high,.metal,[id='+X'],[id='+Z']) .can:empty+.eng {
 :is(#GRP,#Al.flat) .desc {
     font-size:.55em;
 }
+#Ig .desc {
+    letter-spacing:-.03em;
+}
 #GRP .desc {
     letter-spacing:-.04em;
 }
@@ -320,15 +323,7 @@ a:is(.dash,.high,.metal,[id='+X'],[id='+Z']) .can:empty+.eng {
     width:calc(100%/var(--scale));
     letter-spacing:-.03em;
 }
-#M.layer5b .desc {
-    --scale:.881;
-}
-#Pr.disk2 .desc {
-    --scale:.888;
-}
-a[id='+VS'] .desc {
-    --scale:.924;
-}
-#Br.layer7b .desc {
-    --scale:.935;
-}
+#M.layer5b .desc  {--scale:.881;}
+#Pr.disk2 .desc   {--scale:.888;}
+a[id='+VS'] .desc {--scale:.924;}
+#Br.layer7b .desc {--scale:.935;}
