@@ -125,7 +125,7 @@ class Cell {
     preview = () => Preview(this.td.matches('td:first-child') ? 'image' : 'part')(this.td);
     code = lang => {
         let {sym, comp, pref, dash, core, mode} = Dissect(this.td);
-        let name = (comp == 'driver' && (pref || dash) ? Part.revise.name(sym, pref) : names[comp][sym])?.[lang] ?? '';
+        let name = (comp == 'driver' && (pref || dash) ? Part.revise.name(sym, `${pref}`) : names[comp][sym])?.[lang] ?? '';
         this.td.innerHTML = this[lang](name, comp, core) + this.add(name, dash, mode);
         this.td.classList.toggle('small', name.length >= (Mapping.maps.oversize[lang].find(sym == 'Ig' ? 'disk' : comp) || 99));
     }
