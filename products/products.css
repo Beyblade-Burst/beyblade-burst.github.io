@@ -361,7 +361,7 @@ td:first-child {
 }
 #eng:not(:checked)~main table:not(.bilingual) .left,
 #eng:checked~main table:not(.bilingual) .right,
-#jap:checked~main .left {
+#jap:checked~main table .left {
     font-size:0;
 }
 .bilingual label[for=eng],
