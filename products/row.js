@@ -85,7 +85,7 @@ class Row {
             new Cell(td).next2((td, i) => lang[i] && td.code(lang[i]))
         );
     }
-    async create([no, type, abbr, extra], place) {
+    async create([no, type, abbr, video, extra], place) {
         let [layer, disk, driver] = abbr.split(' ');
         if (disk && !driver) // lower fusion
             [layer, disk, driver] = [new Layer(layer), new Disk('/'), new Driver(disk, true)];
@@ -98,12 +98,13 @@ class Row {
         this.tr.classList = [type, layer.system ?? ''].join(' ');
         this.tr.setAttribute('data-no', no.split('.')[0]);
         this.tr.setAttribute('data-abbr', abbr);
+        video && this.tr.setAttribute('data-video', video);
 
         this.extra(extra ?? {}).rare(parseFloat(no.split('-')[1]));
         return Q(place).appendChild(this.tr);
     }
     extra({chip, more}) {
-        chip && this.any('layer6c', 'layer').append(Object.assign(document.createElement('img'), {src: `chips.svg#${chip}>`}));
+        chip && this.any('layer6c', 'layer').append(Object.assign(document.createElement('img'), {src: `chips.svg#${chip}`}));
         more && this.tr.setAttribute('data-more', Object.keys(more));
         more && Object.entries(more).forEach(([part, column], i) => {
             if (part == '9.disk') return;
@@ -172,8 +173,9 @@ Object.assign(Preview, {
     image: ({parentNode: tr}) => {
         Preview.popup.classList.remove('catalog');
         Preview.popup.title = Mapping.maps.rate.find(tr.no.match(/\d+/));
-        let src = Preview.src(Mapping.maps.image.find(tr.no, true));
-        Preview.popup.innerHTML = `<img src=${src}>${tr.matches('.RB') ? `<img src=/img/RB/${tr.no}.jpg>` : ''}`;
+        let image = Preview.src(Mapping.maps.image.find(tr.no, true));
+        let video = tr.getAttribute('data-video') || $(tr).prevAll(`tr[data-video][data-no=${tr.no}]`)[0]?.getAttribute('data-video');
+        Preview.popup.innerHTML = (video ? video.split(',').map(vid => `<a href=//youtu.be/${vid}></a>`).join('') : '') + `<img src=${image}>` + (tr.matches('.RB') ? `<img src=/img/RB/${tr.no}.jpg>` : '');
     },
     part: async td => {
         Preview.popup.classList.add('catalog');
