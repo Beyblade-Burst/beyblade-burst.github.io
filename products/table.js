@@ -17,7 +17,7 @@ Object.assign(Table, {
     async fetch(key, tbody = '#regular tbody') {
         let beys = await DB.get('html', key);
         if (typeof beys == 'string') {
-            beys = [...Object.assign(document.createElement('template'), {innerHTML: beys}).content.children];
+            beys = [...Object.assign(document.createElement('template'), {innerHTML: beys.replaceAll(/(?<=more\d: ?)'([^']+?)'/g, '"$1"')}).content.children];
             Q(tbody).append(...beys);
         } else {
             beys = await beys.reduce((prev, bey) => prev.then(async arr => [...arr, await new Row().create(bey, tbody)]), Promise.resolve([]));
