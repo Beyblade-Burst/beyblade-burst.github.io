@@ -13,7 +13,7 @@ self.addEventListener('fetch', ev => ev.respondWith(
         if (/\/sw\/delete/.test(url))
             return deleteTentative([...new URLSearchParams(url).keys()].flatMap(comp => comp == 'layer7' ? ['layer7b', 'layer7c'] : [comp]));
 
-        return Promise.resolve(self.cached ?? Head.fetch().then(html => self.cached = parseInt(html.match(/content=(\d+)/)?.[1] ?? 0)))
+        return Promise.resolve(self.cached ?? Head.fetch().then(html => self.cached = parseInt(html.match(/content="?(\d+)/)?.[1] ?? 0)))
         .then(() => new Date / 1000 > self.cached + 60*60*24*14 && updateFiles()) //14 days
         .then(() => caches.match(url, {ignoreSearch: true}))
         .then(cached => cached || goFetch(url))
