@@ -5,7 +5,7 @@ navigator.serviceWorker.register('/worker.js').then(async () =>
     //document.head.insertAdjacentHTML('afterbegin', await (await caches.match('/include/head.html') || await fetch('/include/head.html')).text())
 );
 Promise.all([DB.discard('V6'),caches.delete('V6'),caches.delete('parts'),navigator.serviceWorker.getRegistrations().then(([worker])=>worker?.unregister())])
-.then(() => location.href = `https://go-shoot.github.io/burst/`);
+.then(() => location.href = `https://go-shoot.github.io/burst/`).catch(() => location.href = `https://go-shoot.github.io/burst/`);
 Q = Node.prototype.Q = function(el, func) {
     let els = this.querySelectorAll?.(el) ?? document.querySelectorAll(el);
     return func ? els.forEach(func) : els.length > 1 ? [...els] : els[0];
