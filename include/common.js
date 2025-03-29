@@ -1,8 +1,8 @@
 navigator.serviceWorker.register('/worker.js').then(async () =>
     Promise.all([DB.discard('V6'),caches.delete('V6'),caches.delete('parts'),navigator.serviceWorker.getRegistrations().then(([worker])=>worker?.unregister())])
     .then(() => location.href = `https://go-shoot.github.io`)
-    document.querySelector('link[href="/include/common.css"]') ??
-    document.head.insertAdjacentHTML('afterbegin', await (await caches.match('/include/head.html') || await fetch('/include/head.html')).text())
+    //document.querySelector('link[href="/include/common.css"]') ??
+    //document.head.insertAdjacentHTML('afterbegin', await (await caches.match('/include/head.html') || await fetch('/include/head.html')).text())
 );
 Q = Node.prototype.Q = function(el, func) {
     let els = this.querySelectorAll?.(el) ?? document.querySelectorAll(el);
