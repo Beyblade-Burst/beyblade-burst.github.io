@@ -25,6 +25,18 @@
     }
 </style>
 
+<script>
+Promise.all([
+    new Promise(res => indexedDB.deleteDatabase('V6').onsuccess = res),
+    caches.delete('V6'), caches.delete('parts'),
+    navigator.serviceWorker.getRegistrations().then(([worker]) => worker?.unregister())
+])
+.then(() => location.href = `https://go-shoot.github.io/burst/`).catch(er => {
+    console.error(er);
+    location.href = `https://go-shoot.github.io/burst/`;
+});
+</script>
+
 <header>
     <h1>戰鬥陀螺 爆烈世代￨爆旋陀螺 擊爆戰魂</h1>
     <h2>非官方資訊站</h2>
@@ -51,7 +63,6 @@
         <li><a href=parts/ ><span>部件<br>Parts</span></a></li>
         <li><a href=products/ ><span>商品<br>Products</span></a></li>
         <li><a href=prize/ ><span>景品<br>Prizes</span></a></li>
-        <db-status></db-status>
     </menu>
     <div>
         <span>官方連結</span>
