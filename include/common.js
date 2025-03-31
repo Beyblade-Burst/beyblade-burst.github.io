@@ -1,6 +1,10 @@
 navigator.serviceWorker.register('/worker.js').then(async () =>
-    Promise.all([DB.discard('V6'),caches.delete('V6'),caches.delete('parts'),navigator.serviceWorker.getRegistrations().then(([worker])=>worker?.unregister())])
-    .then(() => location.href = `https://go-shoot.github.io/burst/`)
+Promise.all([
+    new Promise(res => indexedDB.deleteDatabase('V6').onsuccess = res),
+    caches.delete('V6'), caches.delete('parts'),
+    navigator.serviceWorker.getRegistrations().then(([worker]) => worker?.unregister())
+])
+.then(() => location.href = `https://go-shoot.github.io/burst/`).catch(() => location.href = `https://go-shoot.github.io/burst/`)
     //document.querySelector('link[href="/include/common.css"]') ??
     //document.head.insertAdjacentHTML('afterbegin', await (await caches.match('/include/head.html') || await fetch('/include/head.html')).text())
 );
@@ -198,5 +202,9 @@ class Mapping {
     }
     static maps = {};
 }
-Promise.all([DB.discard('V6'),caches.delete('V6'),caches.delete('parts'),navigator.serviceWorker.getRegistrations().then(([worker])=>worker?.unregister())])
+Promise.all([
+    new Promise(res => indexedDB.deleteDatabase('V6').onsuccess = res),
+    caches.delete('V6'), caches.delete('parts'),
+    navigator.serviceWorker.getRegistrations().then(([worker]) => worker?.unregister())
+])
 .then(() => location.href = `https://go-shoot.github.io/burst/`).catch(() => location.href = `https://go-shoot.github.io/burst/`);
